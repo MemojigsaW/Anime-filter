@@ -2,7 +2,7 @@
 Style transfer with NN approach. Cycle GAN with unsupervised learning. The model is implemented according to [the work by Jun-Yan.Z et al](https://arxiv.org/pdf/1703.10593.pdf) The original generator has 6 Resblocks, the tuned version has fewer and number of feature maps in embedding blocks are reduced. A random pooling of images is added. Hyperparameter tunings revolves around LR and the decay rate. 
 
 <p align="center">
-<img src=/Images/cycle_gan.png>
+<img src=/Images/cycle_gan.png width="300" height="300">
 </p>
 
 ## Set up
@@ -14,6 +14,7 @@ Unparied data of selfies and anime avatar from [kaggle](https://www.kaggle.com/s
 <p align="center">
   <img src=/Images/female_348.jpg>
   <img src=/Images/female_1409.jpg>
+  <br/>
   <img src=/Images/0008.jpg>
   <img src=/Images/0009.jpg>
  </p>
@@ -21,7 +22,7 @@ Unparied data of selfies and anime avatar from [kaggle](https://www.kaggle.com/s
 ## Model
 Cycle GAN learns input feature through two different GANs that tries to convert an image into different domains respectively. The generator is a ResNet style additive skip connection downsampled with conv. The discriminator outputs 16x16 map that represents the markovian field of the input image. 
 
-<img src=/Images/ModelArchitecture.png align="center">
+<img align="center" src=/Images/Model Architecture.png>
 
 ## Performance
 
