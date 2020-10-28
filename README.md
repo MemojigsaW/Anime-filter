@@ -2,7 +2,7 @@
 Style transfer with NN approach. Cycle GAN with unsupervised learning. The model is implemented according to [the work by Jun-Yan.Z et al](https://arxiv.org/pdf/1703.10593.pdf) The original generator has 6 Resblocks, the tuned version has fewer and number of feature maps in embedding blocks are reduced. A random pooling of images is added. Hyperparameter tunings revolves around LR and the decay rate. 
 
 <p align="center">
-<img src=/Images/cycle_gan.png width="300" height="300">
+<img src=/Images/cycle_gan.png width="500" height="500">
 </p>
 
 ## Set up
@@ -22,21 +22,35 @@ Unparied data of selfies and anime avatar from [kaggle](https://www.kaggle.com/s
 ## Model
 Cycle GAN learns input feature through two different GANs that tries to convert an image into different domains respectively. The generator is a ResNet style additive skip connection downsampled with conv. The discriminator outputs 16x16 map that represents the markovian field of the input image. 
 
-<img align="center" src=/Images/Model Architecture.png>
+<img align="center" src="/Images/Model Architecture.png">
 
 ## Performance
 
 ### Training and validation
 The results are evaluated qulitatively. Performance for the training set and validation set are identical. 
 
-2 good 
-2 bad
+#### Cycle A
+<p align="center">
+<img src=/Images/AtoB_bad.png>
+<img src=/Images/AtoB_good.png>
+</p>
+
+#### Cycle B
+<p align="center">
+<img src=/Images/BtoA_bad.png>
+<img src=/Images/BtoA_good.png>
+</p>
 
 ### Testing 
 For female selfies, the performance mainly depends on if the image contains foreign objects (e.g., glasses, hat, mask etc.). For male selfie and objects, unrecognizable features such as beard will be ignored. 
 
-1 asmon
-1 morgan 
-1 organce
+<p align="center">
+<img src=/Images/asmon.png>
+<br/>
+<img src=/Images/morgen.png>
+<br/>
+<img src=/Images/orange.png>
+
+</p>
 
 ## Conclusion 
