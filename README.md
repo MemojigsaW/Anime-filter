@@ -1,5 +1,5 @@
 ## Overview
-Style transfer with NN approach. Cycle GAN with unsupervised learning. The model is implemented according to [the work by Jun-Yan.Z et al](https://arxiv.org/pdf/1703.10593.pdf) The original generator has 6 Resblocks, the tuned version has fewer and number of feature maps in embedding blocks are reduced. A random pooling of images is added. Hyperparameter tunings revolves around LR and the decay rate. 
+Style transfer with NN approach. Cycle GAN with unsupervised learning. The model is implemented according to [the work by Jun-Yan.Z et al](https://arxiv.org/pdf/1703.10593.pdf) The original generator has 6 Resblocks, the tuned version has fewer and number of feature maps in embedding blocks are reduced. A random pooling of images is added. Hyperparameter tunings revolves around LR, decay rate and effecting of a pooling of process images. 
 
 <p align="center">
 <img src=/Images/cycle_gan.png width="512">
@@ -20,9 +20,11 @@ Unparied data of selfies and anime avatar from [kaggle](https://www.kaggle.com/s
  </p>
 
 ## Model
-Cycle GAN learns input feature through two different GANs that tries to convert an image into different domains respectively. The generator is a ResNet style additive skip connection downsampled with conv. The discriminator outputs 16x16 map that represents the markovian field of the input image. 
+Cycle GAN learns input feature through two different GANs that tries to convert an image into different domains respectively. In each cycle, an image from domain A under goes transformation to domain B then back to A. The reconstructed image is compared to the original input. The generator is a ResNet style additive skip connection downsampled with conv. The discriminator outputs 16x16 map that represents the markovian field of the input image. 
 
-<img align="center" src="/Images/Model Architecture.png" width="640">
+<p align="center">
+<img src="/Images/Model Architecture.png" width="640">
+</p>
 
 ## Performance
 
@@ -48,7 +50,7 @@ Some bad ones
 </p>
 
 ### Testing 
-For female selfies, the performance mainly depends on if the image contains foreign objects (e.g., glasses, hat, mask etc.). For male selfie and objects, unrecognizable features such as beard will be ignored. 
+For female selfies, the performance mainly depends on if the image contains foreign objects (e.g., glasses, hat, mask, phone etc.). For male selfie and objects, unrecognizable features such as beard will be ignored. 
 
 <p align="center">
 <img src=/Images/asmon.PNG width="640">
@@ -59,5 +61,5 @@ For female selfies, the performance mainly depends on if the image contains fore
 </p>
 
 ## Conclusion 
-In the downscaled models, one with random pooling method show significantly improvement in quality. The model can be expected to generalize the style transfer for both male and female. Currently, the results appear more like style transfer than filtering. In order to retain more features of the photo input, the L1 loss function may be adjusted to have higher weights. 
+In the downscaled models, one with random pooling method show significantly improvement in quality. The model can be expected to generalize the style transfer for both male and female. Currently, the results appear more like style transfer than filtering. In order to retain more features of the input image, the L1 loss function may be adjusted to have higher weights. 
 
