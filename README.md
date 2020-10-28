@@ -31,13 +31,16 @@ The results are evaluated qulitatively. Performance for the training set and val
 
 #### Cycle A
 <p align="center">
-<img src=/Images/AtoB_bad.png width="640">
+
+Some good ones
 <img src=/Images/AtoB_good.png width="640">
+<br/>
+Some bad ones
+<img src=/Images/AtoB_bad.png width="640">
 </p>
 
 #### Cycle B
 <p align="center">
-<img src=/Images/BtoA_bad.png width="640">
 <img src=/Images/BtoA_good.png width="640">
 </p>
 
