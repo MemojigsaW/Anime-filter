@@ -32,10 +32,13 @@ The results are evaluated qulitatively. Performance for the training set and val
 #### Cycle A
 <p align="center">
 
+<br/>
 Some good ones
+<br/>
 <img src=/Images/AtoB_good.png width="640">
 <br/>
 Some bad ones
+<br/>
 <img src=/Images/AtoB_bad.png width="640">
 </p>
 
@@ -56,5 +59,5 @@ For female selfies, the performance mainly depends on if the image contains fore
 </p>
 
 ## Conclusion 
-The tuned model performed relatively well for female selfies without foregin objects. The can be expected to generalize the style transfer for both male and female. Currently, the results appear more like style transfer than filtering. In order to retain more features of the photo input, the L1 loss function may be adjusted to have higher weights. 
+In the downscaled models, one with random pooling method show significantly improvement in quality. The model can be expected to generalize the style transfer for both male and female. Currently, the results appear more like style transfer than filtering. In order to retain more features of the photo input, the L1 loss function may be adjusted to have higher weights. 
 
