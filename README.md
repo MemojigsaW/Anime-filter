@@ -2,7 +2,7 @@
 Style transfer with NN approach. Cycle GAN with unsupervised learning. The model is implemented according to [the work by Jun-Yan.Z et al](https://arxiv.org/pdf/1703.10593.pdf) The original generator has 6 Resblocks, the tuned version has fewer and number of feature maps in embedding blocks are reduced. A random pooling of images is added. Hyperparameter tunings revolves around LR and the decay rate. 
 
 <p align="center">
-<img src=/Images/cycle_gan.png width="500" height="500">
+<img src=/Images/cycle_gan.png width="256">
 </p>
 
 ## Set up
@@ -12,7 +12,7 @@ The checkpoints are too large to be uploaded. In order to train the model, store
 Unparied data of selfies and anime avatar from [kaggle](https://www.kaggle.com/sharmayush/person2anime/activity). The images are resized to 128x128 to lower computational load. 
 
 <p align="center">
-  <img src=/Images/female_348.jpg>
+  <img src=/Images/female_348.jpg width="120">
   <img src=/Images/female_1409.jpg>
   <br/>
   <img src=/Images/0008.jpg>
